@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Point to the `code` folder as the root for GitHub Pages
-          path: '/NotSoScammed/code'
+          path: 'code'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
