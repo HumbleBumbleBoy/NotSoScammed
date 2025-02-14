@@ -1,0 +1,140 @@
+* {
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(32, 48, 61);
+    margin-top: 70px;
+}
+
+a {
+    color: aliceblue;
+}
+
+.navTopContainer {
+    width: 100%;
+    margin: 0;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(23, 35, 46);
+}
+
+.navTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.navTopChild {
+    flex: 1; /* Makes each child take up equal space */
+    display: flex;
+    justify-content: center; /* Centers content horizontally within each child */
+    align-items: center; /* Centers content vertically within each child */
+    height: 100%;
+    font-size: 16px;
+}
+
+.navTopChild:hover {
+    background-color: rgb(38, 54, 68);
+    cursor: pointer;
+}
+
+.homeIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.homeIcon:hover {
+    background-color: rgb(38, 54, 68);
+    cursor: pointer;
+}
+
+.uncSam {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+/* Increased specificity for .clicked */
+.navTopChild.clicked, .homeIcon.clicked {
+    pointer-events: none;
+    background-color: rgb(17, 24, 31);
+    cursor: auto;
+    color: rgb(128, 128, 128);
+}
+
+.navTopChild.clicked:hover {
+    background-color: rgb(17, 24, 31); /* Same as .clicked */
+    cursor: auto;
+}
+
+.mainContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+}
+
+.mainContainerChild {
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mainContainerChildPicture {
+    width: 40%;
+    display: flex;
+    flex-flow: row wrap; /* Change to row wrap for horizontal flow */
+    gap: 10px; /* Adds spacing between images */
+    align-items: flex-start; /* Aligns images to the top */
+}
+
+.mainContainerChildForm {
+    width: 60%;
+    display: flex;
+    flex-flow: column;
+}
+
+.formChild {
+    width: 80%;
+    margin-top: 50px;
+}
+
+.inputGeneric {
+    border: none; /* Remove border */
+    background: none; /* Remove background color */
+    outline: none; /* Remove the default focus outline */
+    background-color: rgb(36, 58, 66);
+    font-size: 60px;
+    color: aliceblue;
+    transition: transform 0.1s ease; /* Smooth transition for scaling */
+    transform-origin: left center; /* Ensures scaling happens from the left */
+}
+
+.inputGeneric:focus {
+    transform: scale(1.05); /* Slightly enlarge the input on focus */
+    background-color: rgba(54, 144, 228, 0.3); /* Add a light background color */
+}
+
+.robuxOptionContainer {
+    display: flex;
+    flex-flow: row wrap;
+    width: 800px;
+    background-color: black;
+}
+
+.robuxOptionChild {
+    width: 250px;
+    margin: 5px;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+}
+
