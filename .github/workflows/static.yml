@@ -36,8 +36,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '${{ github.workspace }}'
+          # Point to the `code` folder as the root for GitHub Pages
+          path: 'code'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
